@@ -21,7 +21,7 @@ tag = soup.header.p
 tag.string
 soup.header.p.string
 
-# Attributes (warna kuning di inspect -> class, style, dkk)
+# Attributes (warna kuning di inspect -> class, style, summary dkk)
 tag = soup.header.a
 tag.attrs
 tag['data-toggle']
