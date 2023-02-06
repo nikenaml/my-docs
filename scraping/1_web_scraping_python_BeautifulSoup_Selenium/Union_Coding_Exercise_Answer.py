@@ -43,7 +43,7 @@ for post in postings:
     except:
         pass
 
-#fixes the link of the first 4 products on the page    
+#fixes the link of the first 4 products on the page  (For every row besides those for which we do)  
 df['Link'][4:] = 'https://store.unionlosangeles.com'+df['Link'][4:]
 
 

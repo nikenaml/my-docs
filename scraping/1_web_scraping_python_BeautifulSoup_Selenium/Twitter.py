@@ -53,8 +53,8 @@ soup = BeautifulSoup(driver.page_source, 'lxml')
 
 #grabs the HTML of each tweet
 #ERROR WARNING! If there is an error try recopying the class attribute here, twitter may have changed it by like one or two letters whcih affects our code
-postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0') 
-
+# postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0') 
+postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0') # currently class
 
 #This loop will keep scrolling down the webpage loading in and collecting new tweets until we have scraped 100 unique tweets
 tweets = []
@@ -65,7 +65,8 @@ while True:
     time.sleep(1)
     soup = BeautifulSoup(driver.page_source, 'lxml')
     #need to change the class here to match it with the other posting variable if there is an error
-    postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0')
+    # postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0')
+    postings = soup.find_all('div', class_ = 'css-901oao r-18jsvk2 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0') # currently class
     tweets2 = list(set(tweets))
     if len(tweets2) > 200:
         break
